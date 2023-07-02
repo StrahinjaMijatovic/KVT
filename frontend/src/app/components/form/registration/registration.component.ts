@@ -32,7 +32,11 @@ export class RegistrationComponent implements OnInit {
   createForm() {
     this.register = this.fb.group(
       {
-        displayName: new FormControl(null, [
+        firstName: new FormControl(null, [
+          Validators.required,
+          Validators.minLength(2),
+        ]),
+        lastName: new FormControl(null, [
           Validators.required,
           Validators.minLength(2),
         ]),
@@ -64,7 +68,9 @@ export class RegistrationComponent implements OnInit {
       () => {
         this.router.navigateByUrl('/login');
       },
-      () => {}
+      (error) => {
+        console.log(error);
+      }
     );
   }
 }

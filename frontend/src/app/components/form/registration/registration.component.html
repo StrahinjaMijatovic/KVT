@@ -10,23 +10,23 @@
             (submit)="onSubmit()"
           >
             <div class="form-group">
-              <label for="displayName" class="cols-sm-2 control-label"
+              <label for="firstName" class="cols-sm-2 control-label"
                 >Your Name</label
               >
               <div class="cols-sm-10">
                 <div class="form-group">
                   <input
-                    formControlName="displayName"
+                    formControlName="firstName"
                     type="text"
                     class="form-control"
-                    name="displayName"
-                    id="displayName"
+                    name="firstName"
+                    id="firstName"
                     placeholder="Enter your Name"
                   />
                   <div
                     *ngIf="
-                      register.controls.displayName.errors?.minlength &&
-                      register.controls.displayName.touched
+                      register.controls.firstName.errors?.minlength &&
+                      register.controls.firstName.touched
                     "
                     class="alert alert-danger"
                   >
@@ -34,8 +34,8 @@
                   </div>
                   <div
                     *ngIf="
-                      register.controls.displayName.errors?.required &&
-                      register.controls.displayName.touched
+                      register.controls.firstName.errors?.required &&
+                      register.controls.firstName.touched
                     "
                     class="alert alert-danger"
                   >
@@ -44,6 +44,42 @@
                 </div>
               </div>
             </div>
+            <div class="form-group">
+              <label for="lastName" class="cols-sm-2 control-label"
+                >Last Name</label
+              >
+              <div class="cols-sm-10">
+                <div class="form-group">
+                  <input
+                    formControlName="lastName"
+                    type="text"
+                    class="form-control"
+                    name="lastName"
+                    id="lastName"
+                    placeholder="Enter your Last Name"
+                  />
+                  <div
+                    *ngIf="
+                      register.controls.lastName.errors?.minlength &&
+                      register.controls.lastName.touched
+                    "
+                    class="alert alert-danger"
+                  >
+                    Name must be at least 2 characters long
+                  </div>
+                  <div
+                    *ngIf="
+                      register.controls.lastName.errors?.required &&
+                      register.controls.lastName.touched
+                    "
+                    class="alert alert-danger"
+                  >
+                    Field must not be empty
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="form-group">
               <label for="email" class="cols-sm-2 control-label"
                 >Your Email</label

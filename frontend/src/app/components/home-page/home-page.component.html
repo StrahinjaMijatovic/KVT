@@ -1,0 +1,17 @@
+<!-- <p *ngIf="loggedIn()">create-group works!</p> -->
+<!-- <div class="sidebar" *ngIf="loggedIn()">
+    <div class="button-container">
+      <button class="btnCreatePost">Create Post</button>
+      <button class="btnGroup">Create Group</button>
+    </div>
+  </div> -->
+
+  <div class="sidebar" *ngIf="loggedIn()">
+    
+    <div style="text-align: center">
+        <button class="btnCreatePost" (click)=createPostClick()>Create Post</button>
+    </div>
+    <div style="text-align: center">
+        <button class="btnGroup" (click)=createGroupClick()>Create Group</button>
+    </div>
+</div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth-service';
+import { AuthServiceService } from 'src/app/service/auth.service.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -26,5 +27,9 @@ export class NavBarComponent implements OnInit {
 
   logout() {
     return this.auth.logout();
+  }
+
+  changePassword() {
+    this.router.navigate(['/changePassword']);
   }
 }

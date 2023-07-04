@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a href="#">Home</a></li>
-        <li><a href="allGroups">Groups</a></li>
+        <li><a href="allPosts" *ngIf="loggedIn()">All posts</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -44,6 +44,13 @@
         </li>
         <li>
           <div class="d-flex">
+            <button
+              *ngIf="loggedIn()"
+              class="btn btn-light ms-3"
+              (click)="changePassword()"
+            >
+              Change password
+            </button>
             <button
               *ngIf="loggedIn()"
               class="btn btn-light ms-3"

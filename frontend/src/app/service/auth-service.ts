@@ -12,6 +12,7 @@ export class AuthService {
     localStorage.removeItem('jwt token');
     this.router.navigateByUrl('/login');
   }
+  
 
   getUsername(): string {
     let token = this.parseToken();
@@ -48,4 +49,5 @@ export class AuthService {
     let token = localStorage.getItem('jwt token');
     return token;
   }
+
 }

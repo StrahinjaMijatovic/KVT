@@ -1,0 +1,13 @@
+<div *ngFor="let group of groups" class="container">
+    <div class="card">
+        <div class="card-body">
+        <span>{{group.creationTime}}</span>
+        <hr>
+        <h5 class="card-title">{{group.name}}</h5>
+        <p class="card-text">
+            {{group.description}}
+        </p>
+        <a href="group/{{group.id}}" class="btn btn-primary">Details</a>
+        </div>
+    </div>
+</div>

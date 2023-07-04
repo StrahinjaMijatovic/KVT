@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <h3 class="h3">Create Group</h3>
+                <div class="card-body">
+                    <form [formGroup]="createGroup" class="form-horizontal" (submit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="name" class="cols-sm-2 control-label">Name</label>
+                            <div class="cols-sm-10">
+                                <div class="form-group">
+                                    
+                                    <input formControlName="name" type="text" class="form-control" name="name" id="name" placeholder="Enter your group name" />
+                                    <div *ngIf="createGroup.controls.name.errors?.required && createGroup.controls.name.touched" class="alert alert-danger">
+                                        Field must not be empty</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description" class="cols-sm-2 control-label">Description</label>
+                            <div class="cols-sm-10">
+                                <div class="form-group">
+                                    <input formControlName="description" type="description" class="form-control" name="text" id="text" placeholder="Group description" />
+                                    <div *ngIf="createGroup.controls.description.errors?.required && createGroup.controls.description.touched" class="alert alert-danger">
+                                        Field must not be empty</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <button type="submit" class="btnSubmit" class="btn btn-primary btn-lg btn-block login-button" [disabled]="!createGroup.valid">Create group</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

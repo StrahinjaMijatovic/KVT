@@ -1,0 +1,22 @@
+<div *ngFor="let post of posts" class="postsContainer">
+    <div class="row">
+      <div class="col">
+        <label class="fw-bold">User:</label>
+        <label>{{ post.username }}</label>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col">
+        <label class="fw-bold">Post DateTime:</label>
+        <label>{{ post.created }}</label>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col">
+        <label class="fw-bold">Post Text:</label>
+        <label>{{ post.content }}</label>
+      </div>
+    </div>
+  </div>
